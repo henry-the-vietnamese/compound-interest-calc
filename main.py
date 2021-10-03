@@ -2,7 +2,7 @@
 # File:         main.py
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
-# Date:         22/7/2021
+# Date:         3/10/2021
 # Description:  The main calculator.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
@@ -18,8 +18,8 @@ from calculating_procedures import *
 
 welcome = (
     """The compound interest calculator helps you work out:
-    1. final amount
-    2. regular deposit
+    1. future value
+    2. regular deposit / initial investment
     3. annual interest rate
     4. number of years
     """
@@ -38,12 +38,12 @@ while option not in [1, 2, 3, 4]:
 n = int(input('How many times does compounding occur? (e.g., annually -> 1): '))
 
 if option == 1:
-    print(f'\nAt the end of the period you\'ll have {int(final_amount(n)):,}VND.')
+    print(f'\nAt the end of the period, you\'ll have roughly ${int(final_amount(n)):,}.')
 elif option == 2:
-    print(f'\nYou will need to deposit {int(regular_deposit(n)):,}VND in order to\
-receive the wished final amount.')
+    print(f'\nYou will need to deposit regularly roughly ${int(regular_deposit(n)):,} \
+in order to receive the wished final amount.')
 elif option == 3:
-    print(f'\nThe annual interest rate would be {int(interest_rate(n)) * 100}%.')
+    print(f'\nThe annual interest rate would be roughtly {int(interest_rate(n)) * 100}%.')
 else:
-    print(f'\nIt would take you approximately {int(years(n))} years to attain that \
+    print(f'\nIt would take you roughly {int(years(n))} years to attain that \
 final amount.')

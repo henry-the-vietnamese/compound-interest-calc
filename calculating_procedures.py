@@ -3,8 +3,8 @@
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         3/10/2021
-# Description:  Playing with the compound interest formular to create a 
-#               business-like calculator.
+# Description:  Arrange compound interest formula to create a
+#               banking-essential calculator.
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 #
@@ -24,8 +24,8 @@ def final_amount(n):
     return a
 
 
-def regular_deposit(n):
-    a = float(input('Total account balance (final amount): '))
+def regular_deposit(n): # or initial investment
+    a = float(input('Total account balance (future value): '))
     r = float(input('Annual interest rate (as a decimal: 0.1 instead of 10%): '))
     t = int(input('Number of years: '))
     p = a / ((1 + r/n) ** (n*t))
@@ -33,7 +33,7 @@ def regular_deposit(n):
 
 
 def interest_rate(n):
-    a = float(input('Total account balance (final amount): '))
+    a = float(input('Total account balance (future value): '))
     p = float(input('Initial investment (regular deposit): '))
     t = int(input('Number of years: '))
     r = n * (-1 + (a/p ** (1 / (n*t))))
@@ -41,7 +41,7 @@ def interest_rate(n):
 
 
 def years(n):
-    a = float(input('Total account balance (final amount): '))
+    a = float(input('Total account balance (future value): '))
     p = float(input('Initial investment (regular deposit): '))
     r = float(input('Annual interest rate (as a decimal: 0.1 instead of 10%): '))
     t = (log(a/p, 1+r/n)) / n

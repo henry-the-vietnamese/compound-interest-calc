@@ -1,2 +1,2 @@
-# compound-interest-calc
-Determine how much your money can grow using the power of compound interest.
+# Compound Interest Calculator
+**Aim**: Build a calculator that can work out all opertors of the compound interest formular.

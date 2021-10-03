@@ -16,48 +16,33 @@ The log method allows for strenuous calculation working with exponents.
 from math import log
 
 
-def final_amount():
+def final_amount(n):
     p = float(input('Initial investment (regular deposit): '))
     r = float(input('Annual interest rate (as a decimal: 0.1 instead of 10%): '))
-    n = 12          # Number of times the interest is compounded per year
     t = int(input('Number of years: '))
     a = p * (1 + r/n) ** (n*t)
     return a
 
 
-def regular_deposit():
+def regular_deposit(n):
     a = float(input('Total account balance (final amount): '))
     r = float(input('Annual interest rate (as a decimal: 0.1 instead of 10%): '))
-    n = 12          # Number of times the interest is compounded per year
     t = int(input('Number of years: '))
     p = a / ((1 + r/n) ** (n*t))
     return p
 
 
-def interest_rate():
+def interest_rate(n):
     a = float(input('Total account balance (final amount): '))
     p = float(input('Initial investment (regular deposit): '))
-    n = 12      # Number of times the interest is compounded per year
     t = int(input('Number of years: '))
     r = n * (-1 + (a/p ** (1 / (n*t))))
     return r
 
 
-def years():
+def years(n):
     a = float(input('Total account balance (final amount): '))
     p = float(input('Initial investment (regular deposit): '))
     r = float(input('Annual interest rate (as a decimal: 0.1 instead of 10%): '))
-    n = 12      # Number of times the interest is compounded per year
     t = (log(a/p, 1+r/n)) / n
     return t
-
-
-welcome = (
-    """The compound interest calculator helps you work out:
-    1. final amount
-    2. regular deposit
-    3. annual interest rate
-    4. number of years
-    """
-)
-

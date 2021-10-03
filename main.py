@@ -38,12 +38,12 @@ while option not in [1, 2, 3, 4]:
 n = int(input('How many times does compounding occur? (e.g., annually -> 1): '))
 
 if option == 1:
-    print(f'\nAt the end of the period, you\'ll have roughly ${int(final_amount(n)):,}.')
+    print(f'\nAt the end of the period, the value will amount to roughly ${int(final_amount(n)):,}.')
 elif option == 2:
-    print(f'\nYou will need to deposit regularly roughly ${int(regular_deposit(n)):,} \
+    print(f'\nYou will need to deposit regularly around ${int(regular_deposit(n)):,} \
 in order to receive the wished final amount.')
 elif option == 3:
-    print(f'\nThe annual interest rate would be roughtly {int(interest_rate(n)) * 100}%.')
+    print(f'\nThe annual interest rate should be roughly {int(interest_rate(n)) * 100}%.')
 else:
-    print(f'\nIt would take you roughly {int(years(n))} years to attain that \
-final amount.')
+    print(f'\nIt would take you {int(years(n))} years more or less to attain \
+such final value.')
